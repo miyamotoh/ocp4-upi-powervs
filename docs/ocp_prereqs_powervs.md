@@ -10,19 +10,27 @@ Login to [IBM Cloud Dashboard](https://cloud.ibm.com) and search for "**Power**"
 Select "**Power Systems Virtual Server**" and provide all the required inputs
 to create the service instance.
 
+<details>
+  <summary>Screenshot for searching for "Power"</summary>
 
-![Search for Power](./media/image1.png)
+  ![Search for Power](./media/image1.png)
+</details>
 
-![Select Power Systems Virtual Server](./media/image2.png)
+<details>
+  <summary>Screenshot for selecting "Power Systems Virtual Server"</summary>
 
+  ![Select Power Systems Virtual Server](./media/image2.png)
+</details>
 
-![Fill Details](./media/image3.png)
+<details>
+  <summary>Screenshot for filling out the Create form</summary>
+
+  ![Fill Details](./media/image3.png)
+</details>
+
 1. Provide a meaningful name for your instance in the **Service name** field.
 2. Select the proper **resource group**. More details on resource groups is available from the following [link](https://cloud.ibm.com/docs/account?topic=account-rgs)
 
-![Provide service name](./media/image4.png)
-
-![Create service](./media/image5.png)
 
 ## Create Private Network
 
@@ -30,25 +38,28 @@ A private network is required for your OCP cluster. Choose the previously create
 
 You can create multiple OCP clusters in the same service instance using the same private network. If required you can also create multiple private networks.
 
-Provide the required inputs for private subnet creation
-![Select subnet](./media/image6.png)
+<details>
+  <summary>Provide the required inputs for private subnet creation</summary>
 
-![Provide Input](./media/image7.png)
-
-![Create subnet](./media/image8.png)
-
+  ![Select subnet](./media/image6.png)
+  ![Provide Input](./media/image7.png)
+  ![Create subnet](./media/image8.png)
+</details>
 
 ## Raise a Service Request to enable IP communication between PowerVS instances on private network
 In order for your instances to communicate within the subnet, you'll need to create a service request.
 
-Click on **Support** in the top bar and scroll down to **Contact Support**, then select "**Create a case**"
+<details>
+  <summary>Click on <b>Support</b> in the top bar and scroll down to <b>Contact Support</b>, then select "<b>Create a case</b>"</summary>
 
+  ![Create a case](./media/image9.png)
+</details>
 
-![Create a case](./media/image9.png)
+<details>
+  <summary>Select "<b>Power Systems Virtual Server</b>" tile</summary>
 
-Select "**Power Systems Virtual Server**" tile
-
-![Create a case Page](./media/image10.png)
+  ![Create a case Page](./media/image10.png)
+</details>
 
 Complete the details as shown using the following template:
 
@@ -64,11 +75,17 @@ Complete the details as shown using the following template:
     Service Instance: <your-service-name>
   ```
 
-![Sample support request ](./media/image11.png)
+<details>
+  <summary>Put the above in the form</summary>
 
-Click "**Continue**" to accept agreements, and then Click "**Submit case**".
+  ![Sample support request ](./media/image11.png)
+</details>
 
-![Submit Case](./media/image12.png)
+<details>
+  <summary>Click "<b>Continue</b>" to accept agreements, and then Click "<b>Submit case</b>".</summary>
+
+  ![Submit Case](./media/image12.png)
+</details>
 
 
 ## RHCOS and RHEL 8.2 Images for OpenShift
@@ -101,11 +118,16 @@ Please refer to the following [link](https://cloud.ibm.com/docs/cloud-object-sto
 Choose the previously created PowerVS "Service Instance", click "View full details" and select "Boot images".
 Click the "Importing image" option and fill the requisite details like image name, storage type and cloud object storage details.
 
-Example screenshot showing import of RHEL image that is used for bastion
-![Image Import-RHEL](./media/image-import1.png)
+<details>
+  <summary>Example screenshot showing import of RHEL image that is used for bastion</summary>
 
-Example screenshot showing import of RHCOS image used for OCP
-![Image Import-RHCOS](./media/image-import2.png)
+  ![Image Import-RHEL](./media/image-import1.png)
+</details>
 
+<details>
+  <summary>Example screenshot showing import of RHCOS image used for OCP</summary>
+
+  ![Image Import-RHCOS](./media/image-import2.png)
+</details>
 
 Your PowerVS service instance is now ready for OpenShift clusters.
